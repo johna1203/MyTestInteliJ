@@ -1,0 +1,262 @@
+<idea-plugin version="2">
+    <id>magekodox</id>
+    <name>Magedox</name>
+    <version>1.0</version>
+    <vendor email="support@yourcompany.com" url="http://www.yourcompany.com">YourCompany</vendor>
+
+    <description><![CDATA[
+      Enter short description for your plugin here.<br>
+      <small>most HTML tags may be used</small>
+      ]]></description>
+
+    <change-notes><![CDATA[
+      Add change notes here.<br>
+      <small>most HTML tags may be used</small>
+      ]]>
+    </change-notes>
+
+    <!-- please see http://confluence.jetbrains.net/display/IDEADEV/Build+Number+Ranges for description -->
+    <idea-version since-build="107.105"/>
+
+    <!-- please see http://confluence.jetbrains.net/display/IDEADEV/Plugin+Compatibility+with+IntelliJ+Platform+Products
+         on how to target different products -->
+    <!-- uncomment to enable plugin in all products
+    <depends>com.intellij.modules.lang</depends>
+    -->
+    <depends>com.intellij.modules.ultimate</depends>
+
+    <application-components>
+        <!-- Add your application components here -->
+    </application-components>
+
+    <project-components>
+        <!--&lt;!&ndash; Add your project components here &ndash;&gt;-->
+        <!--<component>-->
+        <!--&lt;!&ndash; Component's implementation class &ndash;&gt;-->
+        <!--<implementation-class>com.kodokux.magedox.vfs.MagedoxVfs</implementation-class>-->
+        <!--&lt;!&ndash; Component's interface class &ndash;&gt;-->
+        <!--<interface-class>com.kodokux.magedox.vfs.MagedoxVfs</interface-class>-->
+        <!--</component>-->
+    </project-components>
+
+    <actions>
+        <!-- Add your actions here -->
+        <action id="MagedokuxAction" class="com.kodokux.magedox.MagedokuxAction" text="Magedox"
+                description="Magento Plugin by Kodokux">
+            <add-to-group group-id="ToolsMenu" anchor="last"/>
+            <keyboard-shortcut keymap="$default" first-keystroke="shift ctrl k"/>
+        </action>
+
+        <!-- Admin -->
+        <!--"admin_notifications_action",-->
+        <action id="magedox_admin_notifications_action" class="com.kodokux.magedox.magerun.AdminAction"
+                text="Toggles admin notifications"/>
+        <!--"admin_user_change-password_action",-->
+        <action id="magedox_admin_user_change-password_action" class="com.kodokux.magedox.magerun.AdminAction"
+                text="Changes the password of a adminhtml user."/>
+        <!--"admin_user_create_action",-->
+        <action id="magedox_admin_user_create_action" class="com.kodokux.magedox.magerun.AdminAction"
+                text="Create admin user."/>
+        <!--"config_admin_list_action"-->
+        <action id="magedox_admin_list_action" class="com.kodokux.magedox.magerun.AdminAction"
+                text="List admin users."/>
+
+        <!--"cache_clean_action",-->
+        <action id="magedox_cache_clean_action" class="com.kodokux.magedox.magerun.CacheAction"
+                text="Clean magento cache"/>
+        <!--"cache_disable_action",-->
+        <action id="magedox_cache_disable_action" class="com.kodokux.magedox.magerun.CacheAction"
+                text="Disables magento caches"/>
+        <!--"cache_enable_action",-->
+        <action id="magedox_cache_enable_action" class="com.kodokux.magedox.magerun.CacheAction"
+                text="Enables magento caches"/>
+        <!--"cache_flush_action",-->
+        <action id="magedox_cache_flush_action" class="com.kodokux.magedox.magerun.CacheAction"
+                text="Flush magento cache storage"/>
+        <!--"cache_list_action"        -->
+        <action id="magedox_cache_list_action" class="com.kodokux.magedox.magerun.CacheAction"
+                text="Lists all magento caches"/>
+
+        <!--"cms_banner_toggle",-->
+        <action id="magedox_cms_banner_toggle" class="com.kodokux.magedox.magerun.CmsAction"
+                text="Toggle a banner (Enterprise only)"/>
+        <!--"cms_page_publish"-->
+        <action id="magedox_cms_page_publish" class="com.kodokux.magedox.magerun.CmsAction"
+                text="Publish a CMS page revision (Enterprise only)"/>
+
+        <!--"config_dump",-->
+        <action id="magedox_config_dump" class="com.kodokux.magedox.magerun.ConfigAction"
+                text="Dump merged xml config"/>
+        <!--"config_get",-->
+        <action id="magedox_config_get" class="com.kodokux.magedox.magerun.ConfigAction" text="Get a core config item"/>
+        <!--"config_set"-->
+        <action id="magedox_config_set" class="com.kodokux.magedox.magerun.ConfigAction" text="Set a core config item"/>
+
+        <!--"customer_change-password",-->
+        <action id="magedox_customer_change-password" class="com.kodokux.magedox.magerun.CustomerAction"
+                text="Changes the password of a customer"/>
+        <!--"customer_create",-->
+        <action id="magedox_customer_create" class="com.kodokux.magedox.magerun.CustomerAction"
+                text="Creates a customer"/>
+        <!--"customer_create_dummy",-->
+        <action id="magedox_customer_create_dummy" class="com.kodokux.magedox.magerun.CustomerAction"
+                text="Creates a dummy customers"/>
+        <!--"customer_info",-->
+        <action id="magedox_customer_info" class="com.kodokux.magedox.magerun.CustomerAction"
+                text="Show infos about a customre"/>
+        <!--"customer_list"-->
+        <action id="magedox_customer_list" class="com.kodokux.magedox.magerun.CustomerAction" text="Lists customers"/>
+
+        <!--"db_console",-->
+        <action id="magedox_db_console" class="com.kodokux.magedox.magerun.DbAction"
+                text="Opens mysql client by database config from local.xml"/>
+        <!--"db_drop",-->
+        <action id="magedox_db_drop" class="com.kodokux.magedox.magerun.DbAction" text="Drop current database"/>
+        <!--"db_dump",-->
+        <action id="magedox_db_dump" class="com.kodokux.magedox.magerun.DbAction"
+                text="Dumps database with mysqldump cli client according to informations from local.xml"/>
+        <!--"db_import",-->
+        <action id="magedox_db_import" class="com.kodokux.magedox.magerun.DbAction"
+                text="Imports database with mysql cli client according to database defined in local.xml"/>
+        <!--"db_info",-->
+        <action id="magedox_db_info" class="com.kodokux.magedox.magerun.DbAction" text="Dumps database informations"/>
+        <!--"db_query"-->
+        <action id="magedox_db_query" class="com.kodokux.magedox.magerun.DbAction"
+                text="Executes an SQL query in local.xml"/>
+
+        <!--"design_demo-notice"-->
+        <action id="magedox_design_demo-notice" class="com.kodokux.magedox.magerun.DesignAction"
+                text="Toggles demo store notice for a store view dev"/>
+
+        <!--"dev_console",-->
+        <action id="magedox_dev_console" class="com.kodokux.magedox.magerun.DevAction"
+                text="Opens PHP interactive shell with initialized Mage__app()"/>
+        <!--"dev_ide_phpstorm_meta",-->
+        <action id="magedox_dev_ide_phpstorm_meta" class="com.kodokux.magedox.magerun.DevAction"
+                text="Generates meta data file for PhpStorm auto completion"/>
+        <!--"dev_log",-->
+        <action id="magedox_dev_log" class="com.kodokux.magedox.magerun.DevAction"
+                text="Toggle development log (system.log, exception.log)"/>
+        <!--"dev_log_db",-->
+        <action id="magedox_dev_log_db" class="com.kodokux.magedox.magerun.DevAction"
+                text="Turn on/off database query logging"/>
+        <!--"dev_log_size",-->
+        <action id="magedox_dev_log_size" class="com.kodokux.magedox.magerun.DevAction" text="Get size of log file"/>
+        <!--"dev_module_create",-->
+        <action id="magedox_dev_module_create" class="com.kodokux.magedox.magerun.DevAction"
+                text="Creates an registers new magento module"/>
+        <!--"dev_module_list",-->
+        <action id="magedox_dev_module_list" class="com.kodokux.magedox.magerun.DevAction"
+                text="List all installed modules"/>
+        <!--"dev_module_observer_list",-->
+        <action id="magedox_dev_module_observer_list" class="com.kodokux.magedox.magerun.DevAction"
+                text="Lists all registered observers"/>
+        <!--"dev_module_rewrite_conflicts",-->
+        <action id="magedox_dev_module_rewrite_conflicts" class="com.kodokux.magedox.magerun.DevAction"
+                text="Lists all magento rewrite conflicts"/>
+        <!--"dev_module_rewrite_list",-->
+        <action id="magedox_dev_module_rewrite_list" class="com.kodokux.magedox.magerun.DevAction"
+                text="Lists all magento rewrites"/>
+        <!--"dev_profiler",-->
+        <action id="magedox_dev_profiler" class="com.kodokux.magedox.magerun.DevAction"
+                text="Toggles profiler for debugging"/>
+        <!--"dev_report_count",-->
+        <action id="magedox_dev_report_count" class="com.kodokux.magedox.magerun.DevAction"
+                text="Get count of report files"/>
+        <!--"dev_symlinks",-->
+        <action id="magedox_dev_symlinks" class="com.kodokux.magedox.magerun.DevAction"
+                text="Toggle allow symlinks setting"/>
+        <!--"dev_template-hints",-->
+        <action id="magedox_dev_template-hints" class="com.kodokux.magedox.magerun.DevAction"
+                text="Toggles template hints"/>
+        <!--"dev_template-hints-blocks",-->
+        <action id="magedox_dev_template-hints-blocks" class="com.kodokux.magedox.magerun.DevAction"
+                text="Toggles template hints block names"/>
+        <!--"dev_theme_duplicates",-->
+        <action id="magedox_dev_theme_duplicates" class="com.kodokux.magedox.magerun.DevAction"
+                text="Find duplicate files in your theme"/>
+        <!--"dev_theme_list",-->
+        <action id="magedox_dev_theme_list" class="com.kodokux.magedox.magerun.DevAction"
+                text="Lists all available themes"/>
+        <!--"dev_translate_admin",-->
+        <action id="magedox_dev_translate_admin" class="com.kodokux.magedox.magerun.DevAction"
+                text="Toggle inline translation tool for admin"/>
+        <!--"dev_translate_shop"        -->
+        <action id="magedox_dev_translate_shop" class="com.kodokux.magedox.magerun.DevAction"
+                text="Toggle inline translation tool for shop"/>
+
+        <!--"extension_download",-->
+        <action id="magedox_extension_download" class="com.kodokux.magedox.magerun.ExtensionAction"
+                text="Download magento-connect package"/>
+        <!--"extension_install",-->
+        <action id="magedox_extension_install" class="com.kodokux.magedox.magerun.ExtensionAction"
+                text="Install magento-connect package"/>
+        <!--"extension_list",-->
+        <action id="magedox_extension_list" class="com.kodokux.magedox.magerun.ExtensionAction"
+                text="List magento connection extensions"/>
+        <!--"extension_search",-->
+        <action id="magedox_extension_search" class="com.kodokux.magedox.magerun.ExtensionAction"
+                text="Search magento connection extensions"/>
+        <!--"extension_upgrade"        -->
+        <action id="magedox_extension_upgrade" class="com.kodokux.magedox.magerun.ExtensionAction"
+                text="Search magento connection extensions"/>
+
+        <!--"index_list",-->
+        <action id="magedox_index_list" class="com.kodokux.magedox.magerun.IndexAction"
+                text="Lists all magento indexes"/>
+        <!--"index_reindex",-->
+        <action id="magedox_index_reindex" class="com.kodokux.magedox.magerun.IndexAction"
+                text="Reindex a magento index by code"/>
+        <!--"index_reindex_all"        -->
+        <action id="magedox_index_reindex_all" class="com.kodokux.magedox.magerun.IndexAction"
+                text="Reindex all magento indexes"/>
+
+        <!--"sys_check",-->
+        <action id="magedox_sys_check" class="com.kodokux.magedox.magerun.SysAction" text="Checks Magento System"/>
+        <!--"sys_cron_history",-->
+        <action id="magedox_sys_cron_history" class="com.kodokux.magedox.magerun.SysAction"
+                text="Lists last executed jobs"/>
+        <!--"sys_cron_list",-->
+        <action id="magedox_sys_cron_list" class="com.kodokux.magedox.magerun.SysAction" text="Lists all cronjobs"/>
+        <!--"sys_cron_run",-->
+        <action id="magedox_sys_cron_run" class="com.kodokux.magedox.magerun.SysAction"
+                text="Runs a cronjob by job code"/>
+        <!--"sys_info",-->
+        <action id="magedox_sys_info" class="com.kodokux.magedox.magerun.SysAction"
+                text="Prints infos about the current magento system."/>
+        <!--"sys_maintenance",-->
+        <action id="magedox_sys_maintenance" class="com.kodokux.magedox.magerun.SysAction"
+                text="List all installed modules"/>
+        <!--"sys_modules_list",-->
+        <action id="magedox_sys_modules_list" class="com.kodokux.magedox.magerun.SysAction"
+                text="List all installed modules"/>
+        <!--"sys_setup_compare-versions",-->
+        <action id="magedox_sys_setup_compare-versions" class="com.kodokux.magedox.magerun.SysAction"
+                text="Compare module version with core_resource table"/>
+        <!--"sys_setup_run",-->
+        <action id="magedox_sys_setup_run" class="com.kodokux.magedox.magerun.SysAction"
+                text="Runs all new setup scripts."/>
+        <!--"sys_store_config_base-url_list",-->
+        <action id="magedox_sys_store_config_base-url_list" class="com.kodokux.magedox.magerun.SysAction"
+                text="Lists all base urls"/>
+        <!--"sys_store_list",-->
+        <action id="magedox_sys_store_list" class="com.kodokux.magedox.magerun.SysAction"
+                text="Lists all installed store-views"/>
+        <!--"sys_url_list",-->
+        <action id="magedox_sys_url_list" class="com.kodokux.magedox.magerun.SysAction" text="Get all urls"/>
+        <!--"sys_website_list"        -->
+        <action id="magedox_sys_website_list" class="com.kodokux.magedox.magerun.SysAction" text="Lists all websites"/>
+
+        <!--magerun.local-config:generate-->
+        <action id="magerun_local-config_generate" class="com.kodokux.magedox.magerun.SysAction"
+                text="Generates local.xml config"/>
+    </actions>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!--<completion.contributor language="PHP" implementationClass="com.kodokux.magedox.SimpleCompletionContributor"/>-->
+        <projectConfigurable instance="com.kodokux.magedox.ui.SettingsForm"></projectConfigurable>
+        <projectService serviceInterface="com.kodokux.magedox.config.MagedoxSettings"
+                            serviceImplementation="com.kodokux.magedox.config.MagedoxSettings"/>
+        <!-- Add your extensions here -->
+    </extensions>
+</idea-plugin>
