@@ -9,7 +9,7 @@ import com.intellij.openapi.actionSystem.AnActionEvent;
  * User: johna
  * Date: 13/04/16
  * Time: 14:51
- * To change this template use File | Settings | File Templates.
+ * To change this template use File | SettingsForm | File Templates.
  */
 public class OpenBrowserAction extends AnAction {
     public void actionPerformed(AnActionEvent e) {

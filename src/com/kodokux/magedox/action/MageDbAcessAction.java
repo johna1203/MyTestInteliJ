@@ -26,7 +26,7 @@ import java.util.List;
  * User: johna
  * Date: 13/04/16
  * Time: 1:14
- * To change this template use File | Settings | File Templates.
+ * To change this template use File | SettingsForm | File Templates.
  */
 public class MageDbAcessAction extends AnAction {
 

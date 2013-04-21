@@ -11,7 +11,7 @@ import com.intellij.openapi.project.Project;
  * User: johna
  * Date: 13/04/16
  * Time: 2:46
- * To change this template use File | Settings | File Templates.
+ * To change this template use File | SettingsForm | File Templates.
  */
 public class MageGetAtributesAction extends AnAction {
     @Override

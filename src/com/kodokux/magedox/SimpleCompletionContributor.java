@@ -13,7 +13,7 @@ import org.jetbrains.annotations.NotNull;
  * User: johna
  * Date: 13/04/15
  * Time: 21:26
- * To change this template use File | Settings | File Templates.
+ * To change this template use File | SettingsForm | File Templates.
  */
 public class SimpleCompletionContributor extends CompletionContributor {
 

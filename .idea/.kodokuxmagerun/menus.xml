@@ -1,0 +1,103 @@
+<menus>
+    <menu>
+        <title>Admin</title>
+        <children>
+            <menu>
+                <title>admin:notifications</title>
+                <description>Toggles admin notifications</description>
+            </menu>
+            <menu>
+                <title>admin:user:change-password</title>
+                <description>Changes the password of a adminhtml user.</description>
+            </menu>
+            <menu>
+                <title>admin:user:create</title>
+                <description>Create admin user.</description>
+            </menu>
+            <menu>
+                <title>admin:user:list</title>
+                <description>Create admin user.</description>
+            </menu>
+        </children>
+    </menu>
+    <menu>
+        <title>Cache</title>
+        <children>
+            <menu>
+                <title>cache:clean</title>
+                <description>Clean magento cache</description>
+            </menu>
+            <menu>
+                <title>cache:disable</title>
+                <description>Disables magento caches</description>
+            </menu>
+            <menu>
+                <title>cache:enable</title>
+                <description>Enables magento caches</description>
+            </menu>
+            <menu>
+                <title>cache:flush</title>
+                <description>Flush magento cache storage</description>
+            </menu>
+            <menu>
+                <title>cache:list</title>
+                <description>Lists all magento caches</description>
+            </menu>
+        </children>
+    </menu>
+    <menu>
+        <title>Cms</title>
+        <children>
+            <menu>
+                <title>cms:banner:toggle</title>
+                <description>Toggle a banner (Enterprise only)</description>
+            </menu>
+            <menu>
+                <title>cms:page:publish</title>
+                <description>Publish a CMS page revision (Enterprise only)</description>
+            </menu>
+        </children>
+    </menu>
+    <menu>
+        <title>Config</title>
+        <children>
+            <menu>
+                <title>config:dump</title>
+                <description>Dump merged xml config</description>
+            </menu>
+            <menu>
+                <title>config:get</title>
+                <description>Get a core config item</description>
+            </menu>
+            <menu>
+                <title>config:set</title>
+                <description>Set a core config item</description>
+            </menu>
+        </children>
+    </menu>
+    <menu>
+        <title>Customer</title>
+        <children>
+            <menu>
+                <title>customer:change-password</title>
+                <description>Changes the password of a customer.</description>
+            </menu>
+            <menu>
+                <title>customer:create</title>
+                <description>Creates a customer.</description>
+            </menu>
+            <menu>
+                <title>customer:create:dummy</title>
+                <description>Creates a dummy customers.</description>
+            </menu>
+            <menu>
+                <title>customer:info</title>
+                <description>Show infos about a customre</description>
+            </menu>
+            <menu>
+                <title>customer:list</title>
+                <description>Lists customers</description>
+            </menu>
+        </children>
+    </menu>
+</menus>
